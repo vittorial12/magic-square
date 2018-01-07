@@ -12,8 +12,18 @@ def generate_magic_square(magic_char):
             magic_square.append(choice(ascii_lowercase))
     return magic_square
 
+def print_headers():
+    header = '''\
+Program #1: Russian Magic Square
+Author: Vittoria Laudando
+Date: January 7, 2018
+System: Visual Studio Code on OSX
+    '''
+    print(header)
+
 def main():
     magic_char = choice(ascii_letters)
     magic_square = generate_magic_square(magic_char)
+    print_headers()
     
 main()
