@@ -27,12 +27,24 @@ def print_magic_square(magic_square):
             print('{}: {}'.format(i, magic_square[i]))
         else:
             print('{}: {}'.format(i, magic_square[i]), end=' ')
-    print('\n')
+    print()
+
+def print_instructions():
+    instructions = '''\
+1. Choose any two-digit number in the table above (e.g. 73).
+2. Subtract its two digits from itself (e.g. 73 - 7 - 3 = 63)
+3. Find this new number (e.g. 63) and remember the letter next to it.
+4. Now press the return key and I'll read your mind...
+    '''
+    print(instructions)
 
 def main():
     magic_char = choice(ascii_letters)
     magic_square = generate_magic_square(magic_char)
     print_headers()
     print_magic_square(magic_square)
+    print_instructions()
+    input()
+    print('You selected the character: ', magic_char)
     
 main()
