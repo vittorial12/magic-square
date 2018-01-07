@@ -21,9 +21,18 @@ System: Visual Studio Code on OSX
     '''
     print(header)
 
+def print_magic_square(magic_square):
+    for i in range(99, -1, -1):
+        if i % 10 == 0:
+            print('{}: {}'.format(i, magic_square[i]))
+        else:
+            print('{}: {}'.format(i, magic_square[i]), end=' ')
+    print('\n')
+
 def main():
     magic_char = choice(ascii_letters)
     magic_square = generate_magic_square(magic_char)
     print_headers()
+    print_magic_square(magic_square)
     
 main()
